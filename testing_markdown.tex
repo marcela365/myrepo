@@ -1,0 +1,374 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{longtable}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Untitled},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Untitled}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+Warning: this document contains 4 failing validations.
+
+We can validate data inside of specialized code chunks. The
+\textbf{pointblank} makes this possible by loading it, as above. We'll
+perform some simple validations using \texttt{small\_table}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{small\_table}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 13 x 8
+##    date_time           date           a b             c      d e     f    
+##    <dttm>              <date>     <int> <chr>     <dbl>  <dbl> <lgl> <chr>
+##  1 2016-01-04 11:00:00 2016-01-04     2 1-bcd-345     3  3423. TRUE  high 
+##  2 2016-01-04 00:32:00 2016-01-04     3 5-egh-163     8 10000. TRUE  low  
+##  3 2016-01-05 13:32:00 2016-01-05     6 8-kdg-938     3  2343. TRUE  high 
+##  4 2016-01-06 17:23:00 2016-01-06     2 5-jdo-903    NA  3892. FALSE mid  
+##  5 2016-01-09 12:36:00 2016-01-09     8 3-ldm-038     7   284. TRUE  low  
+##  6 2016-01-11 06:15:00 2016-01-11     4 2-dhe-923     4  3291. TRUE  mid  
+##  7 2016-01-15 18:46:00 2016-01-15     7 1-knw-093     3   843. TRUE  high 
+##  8 2016-01-17 11:27:00 2016-01-17     4 5-boe-639     2  1036. FALSE low  
+##  9 2016-01-20 04:30:00 2016-01-20     3 5-bce-642     9   838. FALSE high 
+## 10 2016-01-20 04:30:00 2016-01-20     3 5-bce-642     9   838. FALSE high 
+## 11 2016-01-26 20:07:00 2016-01-26     4 2-dmx-010     7   834. TRUE  low  
+## 12 2016-01-28 02:51:00 2016-01-28     2 7-dmx-010     8   108. FALSE low  
+## 13 2016-01-30 11:23:00 2016-01-30     1 3-dka-303    NA  2230. TRUE  high
+\end{verbatim}
+
+We can perform validation checks on that table with \textbf{pointblank}
+step functions (inside code chunks where \texttt{validate\ =\ TRUE}).
+The results will be initially hidden in the rendered HTML document but
+can be revealed.
+
+{2 validations failed.}
+
+\hypertarget{chunk-3849277}{}
+\begin{verbatim}
+<div class="panel-body" style="padding-left: 18px; padding-top: 18px; padding-right: 18px; padding-bottom: 0px; background: #FAFAFA;">
+  <div class="panel panel-success">
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 1px; fill: green;"><path d="M 28.28125 6.28125 L 11 23.5625 L 3.71875 16.28125 L 2.28125 17.71875 L 10.28125 25.71875 L 11 26.40625 L 11.71875 25.71875 L 29.71875 7.71875 Z"></path></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">col_exists(small_table, columns = vars(a, b, c, d, e, f))</code>
+  </div>
+</div>
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 3px; fill: red;"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 12.21875 10.78125 L 10.78125 12.21875 L 14.5625 16 L 10.78125 19.78125 L 12.21875 21.21875 L 16 17.4375 L 19.78125 21.21875 L 21.21875 19.78125 L 17.4375 16 L 21.21875 12.21875 L 19.78125 10.78125 L 16 14.5625 Z"/></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">rows_distinct(small_table, vars(d, e))</code>
+  </div>
+</div>
+<hr style="margin-top:10px;margin-bottom:0;border:1px solid #EBCCD1;"/>
+<div class="panel-body" style="padding-left:13px;padding-top:15px;padding-right:13px;padding-bottom:15px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+  <code style="background-color:#FAFAFA;padding-left:0;overflow-x:scroll;">## Error: Exceedance of failed test units where there weren't distinct rows across all columns.
+\end{verbatim}
+
+\hypertarget{the-rows_distinct-validation-failed-beyond-the-absolute-threshold-level-1.}{%
+\subsection{\texorpdfstring{The \texttt{rows\_distinct()} validation
+failed beyond the absolute threshold level
+(1).}{The rows\_distinct() validation failed beyond the absolute threshold level (1).}}\label{the-rows_distinct-validation-failed-beyond-the-absolute-threshold-level-1.}}
+
+\hypertarget{failure-level-2-failure-threshold-1}{%
+\subsection{* failure level (2) \textgreater= failure threshold
+(1)}\label{failure-level-2-failure-threshold-1}}
+
+\begin{verbatim}
+</div>
+<hr style="margin-top:0;margin-bottom:0;border:1px solid #EBCCD1;"/>
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 3px; fill: red;"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 12.21875 10.78125 L 10.78125 12.21875 L 14.5625 16 L 10.78125 19.78125 L 12.21875 21.21875 L 16 17.4375 L 19.78125 21.21875 L 21.21875 19.78125 L 17.4375 16 L 21.21875 12.21875 L 19.78125 10.78125 L 16 14.5625 Z"/></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">col_vals_gt(small_table, vars(d), 1000)</code>
+  </div>
+</div>
+<hr style="margin-top:10px;margin-bottom:0;border:1px solid #EBCCD1;"/>
+<div class="panel-body" style="padding-left:13px;padding-top:15px;padding-right:13px;padding-bottom:15px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+  <code style="background-color:#FAFAFA;padding-left:0;overflow-x:scroll;">## Error: Exceedance of failed test units where values in `d` should have been &gt; `1000`.
+\end{verbatim}
+
+\hypertarget{the-col_vals_gt-validation-failed-beyond-the-absolute-threshold-level-1.}{%
+\subsection{\texorpdfstring{The \texttt{col\_vals\_gt()} validation
+failed beyond the absolute threshold level
+(1).}{The col\_vals\_gt() validation failed beyond the absolute threshold level (1).}}\label{the-col_vals_gt-validation-failed-beyond-the-absolute-threshold-level-1.}}
+
+\hypertarget{failure-level-6-failure-threshold-1}{%
+\subsection{* failure level (6) \textgreater= failure threshold
+(1)}\label{failure-level-6-failure-threshold-1}}
+
+\begin{verbatim}
+</div>
+<hr style="margin-top:0;margin-bottom:0;border:1px solid #EBCCD1;"/>
+\end{verbatim}
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+We could also use \textbf{pointblank}'s \texttt{stop\_if\_not()}
+function to generate some predicate-based validation statements.
+
+{1 validation failed.}
+
+\hypertarget{chunk-3863885}{}
+\begin{verbatim}
+<div class="panel-body" style="padding-left: 18px; padding-top: 18px; padding-right: 18px; padding-bottom: 0px; background: #FAFAFA;">
+  <div class="panel panel-success">
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 1px; fill: green;"><path d="M 28.28125 6.28125 L 11 23.5625 L 3.71875 16.28125 L 2.28125 17.71875 L 10.28125 25.71875 L 11 26.40625 L 11.71875 25.71875 L 29.71875 7.71875 Z"></path></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">stop_if_not(nrow(small_table) &gt; 10)</code>
+  </div>
+</div>
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 3px; fill: red;"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 12.21875 10.78125 L 10.78125 12.21875 L 14.5625 16 L 10.78125 19.78125 L 12.21875 21.21875 L 16 17.4375 L 19.78125 21.21875 L 21.21875 19.78125 L 17.4375 16 L 21.21875 12.21875 L 19.78125 10.78125 L 16 14.5625 Z"/></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">stop_if_not("time" %in% colnames(small_table))</code>
+  </div>
+</div>
+<hr style="margin-top:10px;margin-bottom:0;border:1px solid #EBCCD1;"/>
+<div class="panel-body" style="padding-left:13px;padding-top:15px;padding-right:13px;padding-bottom:15px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+  <code style="background-color:#FAFAFA;padding-left:0;overflow-x:scroll;">## Error: '"time" %in% colnames(small_table)' is not TRUE.</code>
+</div>
+<hr style="margin-top:0;margin-bottom:0;border:1px solid #EBCCD1;"/>
+\end{verbatim}
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+Note that with multiple \textbf{pointblank} step functions chained
+together, only the first error encountered will be reported.
+
+{1 validation failed.}
+
+\hypertarget{chunk-3326955}{}
+\begin{verbatim}
+<div class="panel-body" style="padding-left: 18px; padding-top: 18px; padding-right: 18px; padding-bottom: 0px; background: #FAFAFA;">
+  <div class="panel panel-danger">
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 3px; fill: red;"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 12.21875 10.78125 L 10.78125 12.21875 L 14.5625 16 L 10.78125 19.78125 L 12.21875 21.21875 L 16 17.4375 L 19.78125 21.21875 L 21.21875 19.78125 L 17.4375 16 L 21.21875 12.21875 L 19.78125 10.78125 L 16 14.5625 Z"/></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">small_table %&gt;% 
+\end{verbatim}
+
+col\_exists(columns = vars(a, b, c, d, e, f)) \%\textgreater\% \# this
+passes validation rows\_distinct() \%\textgreater\% \# this step fails
+(we see an error message) col\_vals\_gt(vars(d), 5000) \# this also
+fails (we do not see its error)
+
+\begin{verbatim}
+</div>
+<hr style="margin-top:10px;margin-bottom:0;border:1px solid #EBCCD1;"/>
+<div class="panel-body" style="padding-left:13px;padding-top:15px;padding-right:13px;padding-bottom:15px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+  <code style="background-color:#FAFAFA;padding-left:0;overflow-x:scroll;">## Error: Exceedance of failed test units where there weren't distinct rows across all columns.
+\end{verbatim}
+
+\hypertarget{the-rows_distinct-validation-failed-beyond-the-absolute-threshold-level-1.-1}{%
+\subsection{\texorpdfstring{The \texttt{rows\_distinct()} validation
+failed beyond the absolute threshold level
+(1).}{The rows\_distinct() validation failed beyond the absolute threshold level (1).}}\label{the-rows_distinct-validation-failed-beyond-the-absolute-threshold-level-1.-1}}
+
+\hypertarget{failure-level-2-failure-threshold-1-1}{%
+\subsection{* failure level (2) \textgreater= failure threshold
+(1)}\label{failure-level-2-failure-threshold-1-1}}
+
+\begin{verbatim}
+</div>
+<hr style="margin-top:0;margin-bottom:0;border:1px solid #EBCCD1;"/>
+\end{verbatim}
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+If all validations in a \texttt{validate} chunk do not fail, we can
+still inspect the validation code.
+
+{All validations passed.}
+
+\hypertarget{chunk-3214015}{}
+\begin{verbatim}
+<div class="panel-body" style="padding-left: 18px; padding-top: 18px; padding-right: 18px; padding-bottom: 0px; background: #FAFAFA;">
+  <div class="panel panel-success">
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 1px; fill: green;"><path d="M 28.28125 6.28125 L 11 23.5625 L 3.71875 16.28125 L 2.28125 17.71875 L 10.28125 25.71875 L 11 26.40625 L 11.71875 25.71875 L 29.71875 7.71875 Z"></path></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">small_table %&gt;% 
+\end{verbatim}
+
+col\_is\_date(``date'') \%\textgreater\% col\_vals\_gt(vars(d), vars(c),
+na\_pass = TRUE)
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+We can provide a single, agent-based interrogation inside of a
+\texttt{validate} chunk (the reporting is visible once the
+\texttt{Agent\ Report} button is pressed). For best rendering results,
+don't place anything else inside the chunk. This acts as standalone
+reporting and will not result in document-level errors or warnings.
+
+{All validations passed.}
+
+\hypertarget{chunk-3701207}{}
+\begin{verbatim}
+<div class="panel-body" style="padding-left: 18px; padding-top: 18px; padding-right: 18px; padding-bottom: 0px; background: #FAFAFA;">
+  <div class="panel panel-success">
+\end{verbatim}
+
+\begin{verbatim}
+<div style="display:inline-flex;width:100%;">
+  <div style="margin-top:2px;padding-left:5px;background:#FAFAFA;"><svg height="1.5em" viewBox="0 0 32 32" style="margin-top: 1px; fill: green;"><path d="M 28.28125 6.28125 L 11 23.5625 L 3.71875 16.28125 L 2.28125 17.71875 L 10.28125 25.71875 L 11 26.40625 L 11.71875 25.71875 L 29.71875 7.71875 Z"></path></svg></div>
+  <div style="padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:4px;margin-top:2px;background:#FAFAFA;width:100%;overflow-x:scroll;">
+    <code style="background-color:#FAFAFA;padding-left:0;">small_table %&gt;%
+\end{verbatim}
+
+create\_agent() \%\textgreater\% col\_vals\_gt(vars(a), 3)
+\%\textgreater\% col\_vals\_expr(\textasciitilde{} case\_when( c
+\textgreater{} 5 \textasciitilde{} a \textgreater{} 5 \& d \textgreater=
+2000 )) \%\textgreater\% interrogate()
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+\begin{verbatim}
+</div>
+\end{verbatim}
+
+\end{document}

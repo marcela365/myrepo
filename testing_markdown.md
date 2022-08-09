@@ -44,20 +44,20 @@ small_table
 
 We can perform validation checks on that table with **pointblank** step functions (inside code chunks where `validate = TRUE`). The results will be initially hidden in the rendered HTML document but can be revealed.
 
-preserve65eac9914ba7e5fa
+preserve8e06e672bfef170c
 
 We could also use **pointblank**'s `stop_if_not()` function to generate some predicate-based validation statements.
 
-preserveb21cef136b68db6b
+preserveae4b269582bd81a7
 
 Note that with multiple **pointblank** step functions chained together, only the first error encountered will be reported.
 
-preserve132f5dc079667ee6
+preserveb456edb9bb1ed707
 
 If all validations in a `validate` chunk do not fail, we can still inspect the validation code.
 
-preserve12199642398fb4a7
+preservea220c946c7cfc0ee
 
 We can provide a single, agent-based interrogation inside of a `validate` chunk (the reporting is visible once the `Agent Report` button is pressed). For best rendering results, don't place anything else inside the chunk. This acts as standalone reporting and will not result in document-level errors or warnings.
 
-preserve937c45c3e3a4d81d
+preserve3891db471946f16f
